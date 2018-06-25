@@ -1,0 +1,435 @@
+@import "_bourbon/bourbon"
+@import "_header"
+
+
+
+// sect-design
+.sect-design
+	position: relative
+	min-height: 725px
+	padding: 25px 0
+	display: flex
+	align-items: center
+	justify-content: center
+	overflow: hidden
+
+	&::before,
+	&::after
+		content: ""
+		display: block
+		position: absolute
+	&::before
+		width: 570px
+		top: 0
+		bottom: 0
+		right: 0
+		background-color: $grey
+
+	&::after
+		width: 3000px
+		height: 3000px
+		background-color: $main
+		bottom: 0
+		left: calc(100% - 570px)
+		transform: rotate(45deg)
+		transform-origin: 0 100%
+		opacity: .8
+
+
+	.sect-inner
+		width: 50%
+
+	.title-wrap
+		text-align: left
+
+	.title-descr
+
+	.h2-title
+
+	.sect-txt
+
+
+.sect-txt
+	color: transparentize($text, 0.35);
+	p
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+
+
+
+
+
+//sect-feat
+
+.sect-feat
+	padding: 120px 0 160px
+	background-color: #f6f5f3
+	background-repeat: no-repeat
+	background-image: url("../img/bg-sect-2.jpg"), url("../img/bg-sect.jpg")
+	background-position: center top, center bottom
+	background-size: auto, auto
+
+
+
+
+	.sect-inner
+
+	.title-wrap
+		margin-bottom: 45px
+
+.title-descr
+
+.h2-title
+
+.sect-txt
+
+.feat-itm
+	text-align: center
+
+.feat-ic
+	width: 60px
+	height: 60px
+	background-size: contain
+	background-position: center
+	background-repeat: no-repeat
+	margin-bottom: 20px
+
+.feat-title
+	margin-bottom: 5px
+	font-size: 22px
+	color: $text
+
+.feat-descr
+	color: transparentize($text, 0.4)
+
+
+
+//sect-new-design
+
+
+.sect-new-design
+	overflow: hidden
+	position: relative
+	&::before
+		content: ""
+		display: block
+		position: absolute
+		bottom: 0
+		right: calc(100% - 610px)
+		z-index: -1
+		background-color: $main
+		transform: rotate(-45deg)
+		width: 2000px
+		height: 2000px
+		opacity: .8
+		transform-origin: 100% 100%
+
+
+	.sect-img
+		margin-left: -80px
+		width: 630px
+		height: 370px
+		background-position: center
+		background-repeat: no-repeat
+		background-size: contain
+		background-image: url("../img/macbook.png")
+
+
+	.title-wrap
+		text-align: left
+
+.sect-line
+	display: table
+	width: 100%
+	> div
+		display: table-cell
+		vertical-align: middle
+		height: 550px
+
+	.sect-inner
+		padding-left: 40px
+
+
+.sect-img
+	position: relative
+	.img-inner
+		position: absolute
+		top: 32px
+		left: 50%
+		transform: translate(-50%,0)
+		width: 452px
+		height: 282px
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+
+
+
+
+
+
+//sect-review
+
+.sect-review
+	background-image: url("..//img/bg-sect-3.jpg")
+	background-repeat: no-repeat
+	background-position: center top
+	background-size: cover
+	padding: 110px 0 55px
+
+.sect-inner
+
+.review-itm
+	text-align: center
+
+.review-photo
+	display: inline-block
+	width: 76px
+	height: 76px
+	background-color: #4e4e5e
+	margin-bottom: 15px
+	img
+		display: block
+		width: 100%
+
+.review-name
+	font-size: 22px
+	color: #fff
+	margin-bottom: 5px
+
+.review-post
+	margin-bottom: 20px
+	color: $main
+
+.review-descr
+	color: #fff
+	opacity: .65
+	font-family: "ExoRegular", sans-serif
+	font-style: italic
+
+
+.partner-row
+	text-align: center
+	padding-top: 50px
+
+.partner-logo
+	display: inline-block
+	width: 190px
+	height: 100px
+	background-repeat: no-repeat
+	background-image: url("../img/logos-sprite.png")
+	background-position: left 0 center
+
+.partn-1
+	background-position: left 32px center
+.partn-2
+	background-position: left -181px center
+.partn-3
+	background-position: left -390px center
+.partn-4
+	background-position: left -600px center
+.partn-5
+	background-position: left -805px center
+
+
+
+//sect-feat-2
+.sect-feat-2
+	@extend .sect-feat
+	background-image: none
+	background-color: #f6f5f3
+	padding: 95px 0 0
+
+	
+	.title-wrap
+		margin-bottom: 0
+
+	.sect-txt
+		margin: 0 auto 80px
+		max-width: 660px
+		text-align: center
+
+
+	.feat-img
+		max-width: 820px
+		margin: 0 auto
+		img
+			display: block
+			width: 100%
+
+
+//sect-feat-3
+
+.sect-feat-3
+	@extend .sect-feat-2
+	background-color: $accent
+	padding: 90px 0 80px
+
+	.title-wrap
+		color: #fff
+		.title-dotst
+			color: #fff
+
+
+
+
+.feat-form
+	padding-top: 50px
+	.btn-wrap,
+	.cust-inp
+		position: relative
+		margin-bottom: 30px
+
+	.btn
+		width: 100%
+	
+	.btn-descr
+		color: #fff
+		position: absolute
+		bottom: 100%
+		left: 0
+		text-align: left
+		display: block
+		width: 100%
+		font-family: "ExoRegular", sans-serif
+		padding: 0 0 35px 35px
+		background-image: url("../img/arrow.png")
+		background-repeat: no-repeat
+		background-position: left 0 bottom 15px
+		background-size: 56px 41px
+
+
+.form-descr
+	padding: 20px 0 0
+	color: #b2b3be
+	font-family: "ExoRegular", sans-serif
+	text-align: center
+	a
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+			color: $main
+
+
+
+
+
+
+
+
+
+
+// main-foot
+.main-foot
+	position: relative
+	padding: 80px 0 90px
+	overflow: hidden
+
+	&::after
+		content: ""
+		display: block
+		position: absolute
+		width: 3000px
+		height: 3000px
+		background-color: $main
+		bottom: 0
+		left: 100%
+		transform: rotate(-45deg)
+		transform-origin: 0 100%
+		opacity: .8
+
+
+
+.f-itm
+	font-size: 14px
+	font-family: "ExoRegular", sans-serif
+	color: #8a8a8a
+
+	.logo
+		display: block
+		width: 105px
+		margin-bottom: 5px
+		img
+			display: block
+			width: 100%
+
+.f-itm-title
+	padding-top: 10px
+	font-size: 22px
+	color: $title
+	margin-bottom: 15px
+
+	ul
+	
+	li
+		margin-bottom: 10px
+
+
+
+
+
+
+
+
+.subscr-foot
+
+	.f-itm-title
+		margin-bottom: 20px
+
+	.cust-inp
+		input
+			color: #b1b1b1
+			padding-right: 70px
+			&::placeholder
+				color: #b1b1b1
+
+
+.soc-wrap
+	text-align: center
+	padding: 15px 0
+	a
+		display: inline-block
+		text-decoration: none !important
+		width: 22px
+		height: 22px
+		background-repeat: no-repeat
+		background-position: center
+		background-size: contain
+		margin: 0 10px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========================== Media Queries ========================== */
+@import "_media"

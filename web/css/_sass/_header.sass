@@ -1,0 +1,70 @@
+@import "_var"
+
+/* ================= Header ================= */
+
+
+.main-head
+
+.top-screen
+	background-color: #acb4f3
+	position: relative
+	overflow: hidden
+
+	&.play
+		cursor: pointer
+		.top-txt-wrap
+			opacity: 0
+	
+		.btn-play
+			&::after
+				content: ""
+				display: block
+				position: absolute
+				opacity: 0
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+
+
+.top-video-wrap
+	position: absolute
+	z-index: 1
+	top: 0
+	left: 0
+	bottom: 0
+	width: 100%
+
+.top-video
+	width: 100%
+	height: 100%
+	object-fit: cover
+
+.top-txt-wrap
+	position: relative
+	z-index: 2
+	min-height: 100vh
+	display: flex
+	align-items: center
+	justify-content: center
+	transition: .3s
+	.col-md-10
+		position: static
+
+	.title-wrap
+
+
+	.h1-title
+		margin-bottom: 35px
+
+	.btn-play
+
+	.btn-wrap
+
+	.btn
+
+
+	.btn-descr
+		padding-top: 13px
+		color: transparentize($text, 0.4)
+

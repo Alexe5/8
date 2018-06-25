@@ -1,0 +1,101 @@
+@import "_reset"
+
+.btn-wrap
+	text-align: center
+
+
+// button
+// 	&.btn
+// 		padding: 13px 20px 10px
+
+.btn
+	appearance: none
+	display: inline-block
+	padding: 13px 15px 10px
+	height: 50px
+	border-radius: 3px
+	background-color: $main
+	min-width: 190px
+	color: #fff
+	text-transform: uppercase
+	text-decoration: none !important
+	border: 1px solid $main
+	font-family: "ExoRegular", sans-serif
+
+	&:hover
+		color: $main
+		background-color: transparent
+
+	&:active
+		opacity: .8
+
+
+.btn-play
+	display: inline-block
+	width: 59px
+	height: 59px
+	background-image: url("..//img/_style/play-video.png")
+	cursor: pointer
+
+
+
+
+
+/* Button Drop Down Menu */
+.toggle-btn
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	text-align: center
+	text-decoration: none
+	width: 35px
+	height: 32px
+	z-index: 10
+	cursor: pointer
+	//background-color: pink
+	transition: .7s
+	&:hover
+		span
+			background-color: $main
+			&::before,
+			&::after
+				background-color: $main
+				
+	span
+		position: relative
+		top: 50%
+		margin-top: -1px
+		display: block
+		width: 100%
+		height: 1px
+		background-color: $text
+		transition: 0.3s
+		backface-visibility: hidden
+		&::after,
+		&::before
+			content: ""
+			position: absolute
+			right: 0
+			top: -6px
+			width: 100%
+			height: 1px
+			background-color: $text
+			transition: .7s ease all
+			backface-visibility: hidden
+		&:after
+			top: 6px
+
+
+	&.on
+		transform: rotate(90deg) translate(-8px,0)
+		span
+			background-color: transparent
+			&::before
+				width: 29px
+				height: 1px
+				transform: rotate(45deg) translate(7px, 1px)
+			&::after
+				width: 29px
+				height: 1px
+				transform: rotate(-45deg) translate(8px, -1px)
+/* Button Drop Down Menu END */
